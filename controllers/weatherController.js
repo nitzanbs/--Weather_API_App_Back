@@ -6,7 +6,8 @@ const getWeather = async (req, res) => {
     if (!city) {
       return res.status(400).send('City is required');
     }
-    const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
+    const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=1`);
+    // console.log('API Response:', response.data);
     res.json(response.data);
   } catch (error) {
     res.status(500).send(error.message);
