@@ -44,7 +44,7 @@ To start the backend server, run:
 ```bash
 npm start
 
-The server will start on http://localhost:3000 by default.
+The server will start on http://localhost:5500 by default.
 
 
 
